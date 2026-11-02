@@ -10,8 +10,9 @@ from pathlib import Path
 import re
 import pandas as pd
 
-RAW_DIR = Path("data/raw")
-OUT_PATH = Path("data/interim/pm25_long.csv")
+ROOT = Path(__file__).resolve().parent.parent   # the Delhi-aqi/ folder
+RAW_DIR = ROOT / "data" / "raw"
+OUT_PATH = ROOT / "data" / "interim" / "pm25_long.csv"
 
 # ---- Manual overrides: set these only if auto-detection picks wrong -------
 TIMESTAMP_COL = None   # e.g. "From Date"
